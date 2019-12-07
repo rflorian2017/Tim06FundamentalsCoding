@@ -32,16 +32,18 @@ public class Main {
             System.out.println("Produs");
             Produs produsNou = new Produs();
             produsNou.setNume(bufferedReader.readLine());
+            System.out.println("Dati si cantitatea");
+            produsNou.setNumar(Integer.parseInt(bufferedReader.readLine()));
             produse[i] = produsNou;
             //produsNou.hashCode();
 
         }
         for (int i = 0; i < nrProduse; i++) {
             System.out.println(produse[i]);
-
-
-
         }
+        //Can read numbers representing quantities of each product read at the previous step.
+        // Careful to the capacity
+
     }
 
 }

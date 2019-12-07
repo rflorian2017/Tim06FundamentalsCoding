@@ -2,6 +2,7 @@ package model;
 
 public class Produs {
     private String nume;
+    private int numar;
 
     public String getNume() {
         return nume;
@@ -11,8 +12,17 @@ public class Produs {
         this.nume = nume;
     }
 
+    public int getNumar() {
+        return numar;
+    }
+
+    public void setNumar(int numar) {
+        this.numar = numar;
+    }
+
     @Override
     public String toString() {
-        return nume;
+        return nume + " : " + numar;
     }
+
 }

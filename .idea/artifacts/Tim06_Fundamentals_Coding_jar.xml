@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Tim06_Fundamentals_Coding:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Tim06_Fundamentals_Coding_jar</output-path>
+    <root id="archive" name="Tim06_Fundamentals_Coding.jar">
+      <element id="module-output" name="Tim06_Fundamentals_Coding" />
+    </root>
+  </artifact>
+</component>

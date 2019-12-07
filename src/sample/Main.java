@@ -1,6 +1,7 @@
 package sample;
 
 import coding.problem11.Utility;
+import model.Depozit;
 import model.Produs;
 
 import java.io.BufferedReader;
@@ -20,13 +21,13 @@ public class Main {
         // Can read words representing product names from the keyboard until you reach the first number read.
         int nrProduse;
         System.out.print("Numar produse= ");
-        while ((nrProduse = scanner.nextInt()) > capacitate) {
-            System.out.println("nrProduse must less than capacity");
+        nrProduse = scanner.nextInt();
 
-        }
         System.out.println(nrProduse);
         Produs[] produse = new Produs[nrProduse];
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        Depozit dep = new Depozit(capacitate);
 
         for (int i = 0; i < nrProduse; i++) {
             System.out.println("Produs");
@@ -40,6 +41,13 @@ public class Main {
         }
         for (int i = 0; i < nrProduse; i++) {
             System.out.println(produse[i]);
+        }
+        for (int i = 0; i < nrProduse; i++) {
+            System.out.println(produse[i]);
+            System.out.println("Cate vrei ?: ");
+            int cantitate = Integer.parseInt(bufferedReader.readLine());
+            produse[i].setNumar(produse[i].getNumar() - cantitate);
+            dep.addProdus(produse[i], cantitate);
         }
         //Can read numbers representing quantities of each product read at the previous step.
         // Careful to the capacity

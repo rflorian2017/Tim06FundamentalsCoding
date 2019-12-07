@@ -25,6 +25,7 @@ public class Main {
 
         System.out.println(nrProduse);
         Produs[] produse = new Produs[nrProduse];
+        int[] stocProduse = new int[nrProduse];
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         Depozit dep = new Depozit(capacitate);
@@ -34,24 +35,27 @@ public class Main {
             Produs produsNou = new Produs();
             produsNou.setNume(bufferedReader.readLine());
             System.out.println("Dati si cantitatea");
-            produsNou.setNumar(Integer.parseInt(bufferedReader.readLine()));
+            stocProduse[i] = Integer.parseInt(bufferedReader.readLine());
             produse[i] = produsNou;
             //produsNou.hashCode();
 
         }
         for (int i = 0; i < nrProduse; i++) {
-            System.out.println(produse[i]);
+            System.out.println(produse[i] + ":" + stocProduse[i]);
         }
         for (int i = 0; i < nrProduse; i++) {
-            System.out.println(produse[i]);
+            System.out.println(produse[i] + ":" + stocProduse[i]);
             System.out.println("Cate vrei ?: ");
             int cantitate = Integer.parseInt(bufferedReader.readLine());
-            produse[i].setNumar(produse[i].getNumar() - cantitate);
-            dep.addProdus(produse[i], cantitate);
+            stocProduse[i] = stocProduse[i] - cantitate;
+            if (!dep.addProdus(produse[i], cantitate)) {
+                System.out.println("Depozitul este plin!");
+                break;
+            }
         }
         //Can read numbers representing quantities of each product read at the previous step.
         // Careful to the capacity
-
+        System.out.println(dep);
     }
 
 }

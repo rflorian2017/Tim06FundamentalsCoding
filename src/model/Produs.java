@@ -10,4 +10,9 @@ public class Produs {
     public void setNume(String nume) {
         this.nume = nume;
     }
+
+    @Override
+    public String toString() {
+        return nume;
+    }
 }

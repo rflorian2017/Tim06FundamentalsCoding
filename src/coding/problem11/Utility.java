@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Utility {
     public static int readCapacity(Scanner scanner) {
-        System.out.print("Enter number :");
+        System.out.print("Capacitate:");
         return scanner.nextInt();
     }
 }

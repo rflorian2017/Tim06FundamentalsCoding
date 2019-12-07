@@ -1,0 +1,10 @@
+Create a program:
+That can read two numbers from the keyboard. Second is the capacity of the store in total number of products
+Can read words representing product names from the keyboard until you reach the first number read.
+Can read numbers representing quantities of each product read at the previous step. Careful to the capacity
+Can read numbers representing the prices for each of each product read in step b
+Create a Store object that holds all the previous read data
+The store is able to display its current contents, current value, quantities , etc
+Customers can come into the store. Each customer can hold at least one basket with a limit of 10 products each. (one basket for each hand). The customer can randomly take one or two baskets. A customer can take a product from the “shelf”. This means that the store capacity can decrease.
+The customer has a certain amount of money. If when paying they do not have enough money, they have to remove some products , then recalculate the value of the basket etc.
+Create a menu with all the possible options + additionally an option “q”. This menu is displayed in an infinite loop, together with the possibility to choose an option.
